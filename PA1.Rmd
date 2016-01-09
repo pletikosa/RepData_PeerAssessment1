@@ -1,9 +1,6 @@
----
-title: "Reproducible Research: Peer Assessment 1"
-output: 
-  html_document:
-    keep_md: true
----
+
+Reproducible Research: Peer Assessment 1
+=======================================================
 
 ```{r global_options, include=FALSE}
 knitr::opts_chunk$set(fig.path='figure/')
@@ -300,8 +297,8 @@ Finally, a planel plot is created to illustrate the average number of steps per 
 ```{r stepsPerIntervalAndWeekdayPlot, fig.height=10, fig.width=10}
 
 ## divide the frame into two separate frames, each containing only records for the selected day type
-weekend <- stepsPerIntervalAndWeekday[stepsAveragePerIntervalAndWeekday$wday == "weekend",]
-weekday <- stepsPerIntervalAndWeekday[stepsAveragePerIntervalAndWeekday$wday == "weekday",]
+weekend <- stepsPerIntervalAndWeekday[stepsPerIntervalAndWeekday$wday == "weekend",]
+weekday <- stepsPerIntervalAndWeekday[stepsPerIntervalAndWeekday$wday == "weekday",]
 
 ## configure the printing environment
 par(mfrow = c(2,1), cex.axis=0.7, cex.lab=0.8, cex.main=0.8, mar = c(4, 4, 2, 2), oma = c(2, 2, 2, 2))

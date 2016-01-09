@@ -1,4 +1,6 @@
-# Reproducible Research: Peer Assessment 1
+
+Reproducible Research: Peer Assessment 1
+=======================================================
 
 
 
@@ -113,7 +115,7 @@ par(cex.axis=0.7, cex.lab=0.8, cex.main=0.8)
 barplot(stepsPerDay$count, names = as.character(stepsPerDay$date), xlab = "Day", ylab = "Number of Steps", main = "Total Number of Steps per Day")
 ```
 
-![](figure/stepsPerDayPlot-1.png)\
+![plot of chunk stepsPerDayPlot](figure/stepsPerDayPlot-1.png)
 
 In addition, a histogram of the values representing the number of steps per day is created:
 
@@ -125,7 +127,7 @@ par(cex.axis=0.7, cex.lab=0.8, cex.main=0.8)
 hist(stepsPerDay$count, xlab="Steps per Day", main="Histogram of Steps per Day", col="gray")
 ```
 
-![](figure/stepsPerDayHistogramPlot-1.png)\
+![plot of chunk stepsPerDayHistogramPlot](figure/stepsPerDayHistogramPlot-1.png)
 
 Finally, the mean and median values of the number of steps per day are calculated as follows:
 
@@ -188,7 +190,7 @@ par(cex.axis=0.7, cex.lab=0.8, cex.main=0.8)
 with(stepsPerInterval, plot(as.character(interval), avg, type="l", xlab="Interval", ylab="Average Number of Steps", main="Average Number of Steps per Interval"))
 ```
 
-![](figure/stepsPerIntervalPlot-1.png)\
+![plot of chunk stepsPerIntervalPlot](figure/stepsPerIntervalPlot-1.png)
 
 Finally, the interval containing the maximum average number of steps is identified as follows:  
 
@@ -303,7 +305,7 @@ par(cex.axis=0.7, cex.lab=0.8, cex.main=0.8)
 barplot(stepsPerDayNoMissing$count, names = as.character(stepsPerDayNoMissing$date), xlab="Day", ylab="Number of Steps", main="Total Number of Steps per Day (without missing values)")
 ```
 
-![](figure/stepsPerDayNoMissingPlot-1.png)\
+![plot of chunk stepsPerDayNoMissingPlot](figure/stepsPerDayNoMissingPlot-1.png)
 
 In addition, a histogram of the values representing the number of steps per day is created:
 
@@ -315,7 +317,7 @@ par(cex.axis=0.7, cex.lab=0.8, cex.main=0.8)
 hist(stepsPerDayNoMissing$count, xlab="Steps per Day", main="Histogram of Steps per Day (without missing values)", col="gray")
 ```
 
-![](figure/stepsPerDayNoMissingHistogramPlot-1.png)\
+![plot of chunk stepsPerDayNoMissingHistogramPlot](figure/stepsPerDayNoMissingHistogramPlot-1.png)
 
 
 Finally, the mean and median values of the number of steps taken per day are calculated as follows:
@@ -401,8 +403,8 @@ Finally, a planel plot is created to illustrate the average number of steps per 
 
 ```r
 ## divide the frame into two separate frames, each containing only records for the selected day type
-weekend <- stepsPerIntervalAndWeekday[stepsAveragePerIntervalAndWeekday$wday == "weekend",]
-weekday <- stepsPerIntervalAndWeekday[stepsAveragePerIntervalAndWeekday$wday == "weekday",]
+weekend <- stepsPerIntervalAndWeekday[stepsPerIntervalAndWeekday$wday == "weekend",]
+weekday <- stepsPerIntervalAndWeekday[stepsPerIntervalAndWeekday$wday == "weekday",]
 
 ## configure the printing environment
 par(mfrow = c(2,1), cex.axis=0.7, cex.lab=0.8, cex.main=0.8, mar = c(4, 4, 2, 2), oma = c(2, 2, 2, 2))
@@ -416,7 +418,7 @@ mtext("Interval", side=1, outer=TRUE)
 mtext("Number of Steps", side=2, outer=TRUE)
 ```
 
-![](figure/stepsPerIntervalAndWeekdayPlot-1.png)\
+![plot of chunk stepsPerIntervalAndWeekdayPlot](figure/stepsPerIntervalAndWeekdayPlot-1.png)
 
 Alternatively, the same information can be communicated with the `lattice` package to correspond to the example given in the project description:
 
