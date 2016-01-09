@@ -113,7 +113,7 @@ par(cex.axis=0.7, cex.lab=0.8, cex.main=0.8)
 barplot(stepsPerDay$count, names = as.character(stepsPerDay$date), xlab = "Day", ylab = "Number of Steps", main = "Total Number of Steps per Day")
 ```
 
-![](figures/stepsPerDayPlot-1.png)\
+![](figure/stepsPerDayPlot-1.png)\
 
 In addition, a histogram of the values representing the number of steps per day is created:
 
@@ -125,7 +125,7 @@ par(cex.axis=0.7, cex.lab=0.8, cex.main=0.8)
 hist(stepsPerDay$count, xlab="Steps per Day", main="Histogram of Steps per Day", col="gray")
 ```
 
-![](figures/stepsPerDayHistogramPlot-1.png)\
+![](figure/stepsPerDayHistogramPlot-1.png)\
 
 Finally, the mean and median values of the number of steps per day are calculated as follows:
 
@@ -188,7 +188,7 @@ par(cex.axis=0.7, cex.lab=0.8, cex.main=0.8)
 with(stepsPerInterval, plot(as.character(interval), avg, type="l", xlab="Interval", ylab="Average Number of Steps", main="Average Number of Steps per Interval"))
 ```
 
-![](figures/stepsPerIntervalPlot-1.png)\
+![](figure/stepsPerIntervalPlot-1.png)\
 
 Finally, the interval containing the maximum average number of steps is identified as follows:  
 
@@ -303,7 +303,7 @@ par(cex.axis=0.7, cex.lab=0.8, cex.main=0.8)
 barplot(stepsPerDayNoMissing$count, names = as.character(stepsPerDayNoMissing$date), xlab="Day", ylab="Number of Steps", main="Total Number of Steps per Day (without missing values)")
 ```
 
-![](figures/stepsPerDayNoMissingPlot-1.png)\
+![](figure/stepsPerDayNoMissingPlot-1.png)\
 
 In addition, a histogram of the values representing the number of steps per day is created:
 
@@ -315,7 +315,7 @@ par(cex.axis=0.7, cex.lab=0.8, cex.main=0.8)
 hist(stepsPerDayNoMissing$count, xlab="Steps per Day", main="Histogram of Steps per Day (without missing values)", col="gray")
 ```
 
-![](figures/stepsPerDayNoMissingHistogramPlot-1.png)\
+![](figure/stepsPerDayNoMissingHistogramPlot-1.png)\
 
 
 Finally, the mean and median values of the number of steps taken per day are calculated as follows:
@@ -416,7 +416,7 @@ mtext("Interval", side=1, outer=TRUE)
 mtext("Number of Steps", side=2, outer=TRUE)
 ```
 
-![](figures/stepsPerIntervalAndWeekdayPlot-1.png)\
+![](figure/stepsPerIntervalAndWeekdayPlot-1.png)\
 
 Alternatively, the same information can be communicated with the `lattice` package to correspond to the example given in the project description:
 

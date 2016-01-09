@@ -6,7 +6,7 @@ output:
 ---
 
 ```{r global_options, include=FALSE}
-knitr::opts_chunk$set(fig.path='figures/')
+knitr::opts_chunk$set(fig.path='figure/')
 ```
 
 ## Loading and Preprocessing the Data
